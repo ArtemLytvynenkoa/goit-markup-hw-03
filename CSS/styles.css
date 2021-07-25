@@ -50,7 +50,6 @@ h1,h2,h3,p {
 
 .header{
     border-bottom: 1px solid var(--header-border);
-    padding: 24px 0 25px;
 }
 
 
@@ -113,6 +112,9 @@ h1,h2,h3,p {
 }
 
 .site-nav .link {
+    padding: 32px 0;
+    display: block;
+
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 14px;
@@ -173,8 +175,7 @@ h1,h2,h3,p {
 }
 
 .hero-title {
-    display: block;
-    width: 696px;
+    max-width: 696px;
     margin-left: auto;
     margin-right: auto;
     
@@ -183,29 +184,22 @@ h1,h2,h3,p {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     margin-bottom: 30px;
 }
 
 .hero-button {
-    display: inline-block;
     background-color: var(--hero-button-color);
     color: var(--main-background-color);
-    font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-    align-items: center;
-
     padding: 10px 32px;
     border: none;
-    min-width: 200px;
-    min-height: 50px;
 }
 
 .hero-button:focus,
@@ -222,7 +216,20 @@ h1,h2,h3,p {
 .offer-title,
 .title-portfolio {
     color: #000000;
-    display: none;
+}
+
+.section .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .offer-list .title {
@@ -231,12 +238,10 @@ h1,h2,h3,p {
 
 .offer-list {
     display: flex;
-    justify-content: space-between;
-    padding: 0;
 }
 
 .offer-text {
-    max-width: 270px;
+    width: 270px;
 }
 
 .offer-text:not(:last-child) {
@@ -308,6 +313,7 @@ h1,h2,h3,p {
 .team-list .item {
     border-radius: 0px 0px 4px 4px;
     padding-bottom: 30px;
+    width: 270px;
 
     background-color: var(--main-background-color);
     box-shadow:  0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -394,6 +400,7 @@ margin-bottom: 9px;
 }
 
 .project-list .item {
+    width: 370px;
     margin-bottom: 30px;
     margin-right: 30px;
 }
